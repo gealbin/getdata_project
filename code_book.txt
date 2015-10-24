@@ -1,0 +1,9 @@
+This analysis reads data from the proyect's data set Human Activity Recognition Using Smartphones, the dataset can be found at: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones. See README.txt for more info about the project.
+The script run_analysis.R get two data sets called tidy_data_1 and tidy_data_2. The script assumes that the data files from the project are located in the working directory.
+The first tidy data set combines the training and test information and the activities and subjects. It only shows the average and std features.
+It is basically a data frame with columns: subject, activity label and the features mentioned. Each row represent a different test for a given subject and activity
+To get the original list of features, refer to features.txt. The features are explained in features_info.txt.
+
+The second tidy data set splits the first tidy data set into subject and activity, and calculates the average for each feature of the first tidy data set.
+That is represented as a data frame where the columns are the features and the raws are the combination of subject and activity eg: 13.WALKING.
+
