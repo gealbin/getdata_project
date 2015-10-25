@@ -48,5 +48,11 @@ tidy_data_2 <- split(tidy_data_1[ ,grepl("mean", names(tidy_data_1)) | grepl("st
 ## Apply mean to each column of splitted data frame
 tidy_data_2 <- lapply(tidy_data_2,function(x) colMeans(x))
 
-## Reshape data as dataframe
+## Reshape data as dataframe and add subject and activity label column
 tidy_data_2 <- data.frame(t(as.data.frame(tidy_data_2)))
+split_col <- strsplit(rownames(tidy_data_2), "\\.")
+split_col <- data.frame(split_col)
+tidy_data_2 <- cbind(t(split_col),tidy_data_2)
+colnames(tidy_data_2)[1] <- "activity_labels"
+colnames(tidy_data_2)[2] <- "subject"
+
