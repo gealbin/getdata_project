@@ -7,3 +7,4 @@ To get the original list of features, refer to features.txt. The features are ex
 The second tidy data set splits the first tidy data set into subject and activity, and calculates the average for each feature of the first tidy data set.
 That is represented as a data frame where the columns are the features and the raws are the combination of subject and activity eg: 13.WALKING.
 
+

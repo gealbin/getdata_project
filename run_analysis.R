@@ -55,4 +55,3 @@ split_col <- data.frame(split_col)
 tidy_data_2 <- cbind(t(split_col),tidy_data_2)
 colnames(tidy_data_2)[1] <- "activity_labels"
 colnames(tidy_data_2)[2] <- "subject"
-
